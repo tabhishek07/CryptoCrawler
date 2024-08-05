@@ -1,9 +1,7 @@
-function Watchlist(){
-    return(
-        <>
-        <h2>Watchlist</h2>
-        </>
-    );
-}
+import React from "react";
+
+const Watchlist = () => {
+  return <div>Watchlist</div>;
+};
 
 export default Watchlist;

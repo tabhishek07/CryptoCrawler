@@ -1,9 +1,7 @@
-function Trending(){
-    return(
-        <>
-        <h2>Trending</h2>
-        </>
-    );
-}
+import React from "react";
+
+const Trending = () => {
+  return <div>Trending</div>;
+};
 
 export default Trending;

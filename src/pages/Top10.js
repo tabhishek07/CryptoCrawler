@@ -1,9 +1,7 @@
-function Top10(){
-    return(
-        <>
-        <h2>Top10</h2>
-        </>
-    );
-}
+import React from "react";
+
+const Top10 = () => {
+  return <div>Top10</div>;
+};
 
 export default Top10;
