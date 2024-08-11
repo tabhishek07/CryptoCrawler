@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 // import { useEffect } from "react";
 
-
-
 const Trending = () => {
-
   //  var data = [{
   //       "id": "bitcoin",
   //       "symbol": "btc",
@@ -50,12 +47,15 @@ const Trending = () => {
       .catch((err) => console.error(err));
   }, []);
 
-
+  if (data.length === 0) {
+    return <div>Dummy UI Loading</div>;
+  } else {
     return (
       <div className="bg-gradient-to-r from-neutral-900 via-gray-800 to-rose-900 pb-4">
         <Cards apiData={data} />
       </div>
     );
-}
+  }
+};
 
 export default Trending;
