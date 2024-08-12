@@ -7,10 +7,10 @@ const watchlistSlice = createSlice({
 
   reducers: {
     addCoins(state, action) {
-     const newState = [...state];
-     newState.push(action.payload);
-
-     return newState
+     const newState = [...state]; // cloning state for updation never directly upde state first make a comp
+     newState.push(action.payload);  // pushing action
+ 
+     return newState // returning data
     },
 
     removeCoins(state, action){

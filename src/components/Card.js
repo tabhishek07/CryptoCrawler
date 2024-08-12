@@ -17,8 +17,10 @@ const Card = ({ item, checker }) => {
   const dispatch = useDispatch();
   console.log(data);
 
+  const a = "top10";
+
   function addCoinsTowatchlist() {
-    dispatch(addCoins(item));
+    dispatch(addCoins(item, a));
   }
 
   return (
