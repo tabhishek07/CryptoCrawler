@@ -9,7 +9,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-center">
         <h1 className="text-5xl font-bold mb-4 animate-fadeIn">Welcome to CryptoTracker</h1>
-        <p className="text-lg mb-8">
+        <p className="text-lg mb-8 text-black font-semibold">
           Track your favorite cryptocurrencies and stay updated with the latest trends.
         </p>
         <Link to="/trending">
@@ -23,7 +23,7 @@ const Home = () => {
       <section className="p-6">
         <h2 className="text-3xl font-bold text-center mb-6">Key Features</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg text-center">
+          <div className="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg text-center transition-transform hover:scale-105">
             <FaChartLine className="text-4xl mb-4 mx-auto text-green-400" />
             <h3 className="text-xl font-semibold mb-2">Trending Coins</h3>
             <p>Discover the latest and most popular cryptocurrencies in the market.</p>
@@ -31,7 +31,7 @@ const Home = () => {
               <button className="text-blue-400 hover:underline mt-4">Learn More</button>
             </Link>
           </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg text-center">
+          <div className="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg text-center transition-transform hover:scale-105">
             <FaStar className="text-4xl mb-4 mx-auto text-yellow-400" />
             <h3 className="text-xl font-semibold mb-2">Top 10 Coins</h3>
             <p>View the top 10 cryptocurrencies based on various metrics.</p>
@@ -39,8 +39,8 @@ const Home = () => {
               <button className="text-blue-400 hover:underline mt-4">Learn More</button>
             </Link>
           </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg text-center">
-            <FaListAlt className="text-4xl mb-4 mx-auto text-orange-400" />
+          <div className="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg text-center transition-transform hover:scale-105">
+            <FaListAlt className="text-4xl mb-4 mx-auto text-orange-400 transition-transform hover:scale-105" />
             <h3 className="text-xl font-semibold mb-2">Your Watchlist</h3>
             <p>Keep track of your favorite cryptocurrencies and see their performance.</p>
             <Link to="/watchlist">
