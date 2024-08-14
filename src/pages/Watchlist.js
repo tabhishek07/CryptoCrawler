@@ -1,20 +1,25 @@
 import { useSelector } from "react-redux";
 import Cards from "../components/Cards";
-
+import LoadingPage from "../components/LoadingCard";
 
 const Watchlist = () => {
-
-  var  data = useSelector((store) => store.watchlistSlice);
+  const data = useSelector((store) => store.watchlistSlice);
   console.log(data);
 
   return data.length === 0 ? (
-  <div>No data</div>
+    <div className="flex items-center justify-center h-screen bg-custom-charcoal">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">No Data Found</h1>
+        <p className="text-lg text-gray-400">
+          Your watchlist is empty. Add some items to see them here.
+        </p>
+      </div>
+    </div>
   ) : (
-  <div className="bg-gradient-to-r from-neutral-900 via-gray-800 to-rose-900 pb-4">
-    <Cards apiData = {data} />
+    <div className="bg-custom-charcoal pb-4">
+      <Cards apiData={data} />
     </div>
   );
-  
 };
 
 export default Watchlist;

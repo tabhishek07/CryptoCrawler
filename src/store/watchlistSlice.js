@@ -14,7 +14,14 @@ const watchlistSlice = createSlice({
     },
 
     removeCoins(state, action){
-        console.log(state, action);
+      const index = (element, array) => array.findIndex(obj => JSON.stringify(obj) === JSON.stringify(element));
+
+      const indexofRemovedCoin = index(action.payload , state);
+
+      if(indexofRemovedCoin != -1){
+        state.splice(indexofRemovedCoin, 1)
+      }
+
     },
   },
 });

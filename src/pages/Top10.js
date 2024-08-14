@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
+import LoadingPage from "../components/LoadingCard";
 import { useRef } from "react";
 
 const Top10 = () => {
@@ -24,10 +25,10 @@ const Top10 = () => {
   }, []);
 
   return data.length === 0 ? (
-    <div>UI Loading</div>
+    <div><LoadingPage/></div>
   ) : (
-    <div className="bg-gradient-to-r from-neutral-900 via-gray-800 to-rose-900 pb-4">
-      <h1 ref= { Data}>Hello</h1>
+    <div className="bg-custom-charcoal  pb-4">
+      <h1 ref= { Data}></h1>
       <Cards apiData={data.coins} checker={"top10"} />
     </div>
   );

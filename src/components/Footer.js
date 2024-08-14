@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className=" sticky bottom-0 w-full pt-2 pb-2 bg-gradient-to-r from-neutral-900 via-gray-800 to-rose-900 flex border border-black shadow- justify-between items-center px-4 ">
+    <div className=" sticky bottom-0 w-full pt-2 pb-2 bg-custom-blue flex  shadow- justify-between items-center px-4 ">
       <div>
         <Link to={"/"}>
           {" "}
@@ -18,12 +18,12 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex gap-8 text-[22px]">
-        <FaYoutube className="text-red-700" />
-        <CiLinkedin className="text-blue-700" />
-        <VscGithub />
+        <FaYoutube className="text-red-600 " />
+        <CiLinkedin className="text-blue-600" />
+        <VscGithub className="text-white"/>
         <FaWhatsapp className="text-green-400" />
 
-        <FaXTwitter />
+        <FaXTwitter className="text-white"/>
       </div>
     </div>
   );

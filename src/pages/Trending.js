@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
+import LoadingCard from "../components/LoadingCard";
 // import { useEffect } from "react";
 
 const Trending = () => {
@@ -48,10 +49,10 @@ const Trending = () => {
   }, []);
 
   if (data.length === 0) {
-    return <div>Dummy UI Loading</div>;
+    return <div><LoadingCard/></div>;
   } else {
     return (
-      <div className="bg-gradient-to-r from-neutral-900 via-gray-800 to-rose-900 pb-4">
+      <div className="bg-custom-charcoal pb-4">
         <Cards apiData={data} />
       </div>
     );
