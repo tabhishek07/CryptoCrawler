@@ -16,6 +16,8 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { createContext } from "react";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import Signin from "./pages/Signin";
+import Login from "./pages/Login";
 
 export const Name = createContext();
 
@@ -42,6 +44,8 @@ const browserRouter = createBrowserRouter([
       { path: "/watchlist", element: <Watchlist /> },
       { path: "/trending", element: <Trending /> },
       { path: "/coin/:id", element: <CoinByIdData /> },
+      { path: "/Signin", element : <Signin />},
+      { path: "/Login", element : <Login />}
     ],
     errorElement: <ErrorElement />,
   },
