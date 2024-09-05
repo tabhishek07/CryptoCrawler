@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import LoadingCard from "../components/LoadingCard";
-// import { useEffect } from "react";
 
 const Trending = () => {
   //  var data = [{

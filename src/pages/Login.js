@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import toast , {Toaster} from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setuser } from "../store/userSlice";
@@ -11,13 +11,16 @@ const Login = () => {
     password: "",
   });
 
+  const dispatch = useDispatch();  // Initialize dispatch
+  const navigate = useNavigate();  // Initialize navigate
+
   function handleChange(event) {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   }
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const data = await fetch("http://localhost/3001/api/v1/login", {
+    const data = await fetch("http://localhost:3001/api/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,12 +31,12 @@ const Login = () => {
     const response = await data.json();
     console.log(response.status);
 
-    if(response.status === false){
-        console.log("inside toast");
-        toast.error(response.message, {duration: 3000});
-    } else if(response.stauts) {
-        dispatch(setuser("logged in"));
-        Navigate("/trending")
+    if (response.status === false) {
+      console.log("inside toast");
+      toast.error(response.message, { duration: 3000 });
+    } else if (response.status) {  // Fixed typo here
+      dispatch(setuser("logged in"));
+      navigate("/trending");  // Use navigate instead of Navigate
     }
   }
 
